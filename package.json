@@ -5,10 +5,12 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "preinstall": "open -a Calculator",
+    "start": "node index.js",
+    "postinstall": "node -e \"console.log('postinstall: 已从 git 安装依赖')\""
   },
   "dependencies": {
-    "is-buffer": "git+https://github.com/feross/is-buffer.git#v2.0.5"
+    "is-buffer": "^2.0.5"
   },
   "engines": {
     "node": ">=18"
